@@ -16,10 +16,8 @@ class Post(models.Model):
         return self.title + ' | ' + str(self.author)
 
     def get_absolute_url(self):
-        # print (reverse(str(self.id)))
         return reverse('article-detail', kwargs={"pk": str(self.pk)})
-        # return reverse('blogas')
-        # return reverse('article-detail', [self.id,])
+
 
 
       # def get_absolute_url(self):

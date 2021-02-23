@@ -1,6 +1,6 @@
 {% extends '_base.html' %}
 {% load static %}
-
+{% load crispy_forms_tags %}
 {% block title %}{{ post.title_tag }}{% endblock title %}
 
 {% block content %}
@@ -10,7 +10,7 @@
 <div class="form-group">
     <form method="POST">
         {% csrf_token %}
-        {{ form.as_p }}
+        {{ form | crispy }}
         <button class="btn btn-danger">Publikuoti</button>
     </form>
 </div>

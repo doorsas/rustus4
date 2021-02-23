@@ -21,3 +21,12 @@ class EditForm(forms.ModelForm):
             'title_tag': forms.TextInput(attrs={'class': 'form-control'}),
             'body': forms.Textarea(attrs={'class': 'form-control'}),
         }
+
+class PasirasykForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        fields = ('title', 'body')
+        widgets = {
+            'title': forms.TextInput(),
+            'body': forms.Textarea(),
+        }

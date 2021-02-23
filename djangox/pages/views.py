@@ -1,7 +1,7 @@
 from django.views.generic import TemplateView, ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 
-from .forms import PostForm, EditForm
+from .forms import PostForm, EditForm, PasirasykForm
 from .models import Post
 
 
@@ -10,6 +10,11 @@ class UpdatePostView(UpdateView):
     template_name = 'pages/update_post.html'
     # fields = ['title', 'title_tag', 'body' ]
     form_class = EditForm
+
+class PasirasykPostView(CreateView):
+    model = Post
+    template_name = 'pages/pasirasyk.html'
+    form_class = PasirasykForm
 
 class AddPostView(CreateView):
     model = Post

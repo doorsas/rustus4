@@ -1,0 +1,23 @@
+{% extends '_base.html' %}
+
+{% block title %}Apie{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid">
+  <div class="row">
+    <h1> bego vaikai per girele</h1>
+      <p>tram pam pam pam pam tram pam pam pam pam tram pam pam pam pam tram pam pam pam pam tram pam pam pam pam tram pam pam pam pam </p>
+  </div>
+</div>
+{% load crispy_forms_tags %}
+
+<form method="post" class="uniForm">
+    {{ form.as_p |crispy }}
+</form>
+
+<input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example">
+<input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+<input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example">
+<button class="btn btn-danger">Redaguoti</button>
+{% endblock content %}
